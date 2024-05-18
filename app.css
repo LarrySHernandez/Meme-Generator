@@ -1,0 +1,126 @@
+body {
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+}
+
+
+.topBar {
+    display: block;
+    height: 50px;
+    border: purple 2px solid;
+}
+
+
+h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 55px;
+}
+
+
+.boxFrame {
+    display: flex;
+    justify-content: center
+}
+
+
+.inputBox {
+    border: rgb(32, 156, 150) solid 1px;
+    height: 90vh;
+    width: 90vw;
+    border-radius: 10px;
+    background-color: rgb(44, 44, 44);
+}
+
+
+.imageBox {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 50%;
+    border: blue 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.image div {
+    margin: 10px;
+    text-align: center;
+}
+
+
+
+
+.file {
+    width: 85px;
+    position: relative;
+    left: 32%;
+}
+
+
+
+
+.textBox {
+    position: relative;
+    left: 50%;
+    bottom: 101%;
+    height: 100%;
+    width: 50%;
+    border: red 2px solid;
+
+}
+
+
+.imageBoxTop {
+    display: block;
+    height: 8%;
+    width: 99%;
+    border: white solid 2px;
+    position: absolute;
+    top: 0px;
+}
+
+
+
+
+.hidden {
+    display: none;
+}
+
+
+#memeImageBorder {
+    border: white 2px solid;
+    position: relative;
+    top: 20px;
+    height: 500px;
+    width: 500px;
+    background-size: cover;
+    background-position: 50%;
+    overflow: hidden;
+    background-color: black;
+}
+
+
+
+
+.textTopBar {
+    display: block;
+    border: orange 2px solid;
+    height: 8%;
+}
+
+
+.memeTextBorder {
+    display: flex;
+    position: relative;
+    border: white solid 1px;
+    height: 520px;
+    width: 500px;
+    left: 8%;
+    justify-content: center;
+}
