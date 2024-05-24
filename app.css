@@ -56,10 +56,8 @@ h1 {
 
 
 
-.file {
+.fileImageInput {
     width: 85px;
-    position: relative;
-    left: 32%;
 }
 
 
@@ -92,21 +90,35 @@ h1 {
     display: none;
 }
 
+.imageChooserBox {
+    z-index: 1;
+    position: absolute;
+    left: 310px;
+    bottom: 410px;
+}
 
 #memeImageBorder {
-    border: white 2px solid;
-    position: relative;
-    top: 20px;
+    position: absolute;
+    bottom: 200px;
+    left: 175px;
     height: 500px;
     width: 500px;
     background-size: cover;
     background-position: 50%;
     overflow: hidden;
-    background-color: black;
+    background-color: rgb(44, 44, 44);
+    z-index: 0;
 }
 
 
-
+.imageFooter {
+    border: 10px gray solid;
+    height: 15%;
+    width: 99%;
+    position: relative;
+    top: 41%;
+    background-color: rgb(85, 85, 85);
+}
 
 .textTopBar {
     display: block;
