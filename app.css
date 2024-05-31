@@ -99,15 +99,21 @@ h1 {
 
 #memeImageBorder {
     position: absolute;
-    bottom: 200px;
-    left: 175px;
-    height: 500px;
-    width: 500px;
+    bottom: 320px;
+    /*140px*/
+    left: 280px;
+    /*-10px*/
+    height: 300px;
+    width: 300px;
     background-size: cover;
     background-position: 50%;
     overflow: hidden;
     background-color: rgb(44, 44, 44);
     z-index: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
 }
 
 
@@ -118,6 +124,7 @@ h1 {
     position: relative;
     top: 41%;
     background-color: rgb(85, 85, 85);
+
 }
 
 .textTopBar {
@@ -181,4 +188,20 @@ h1 {
 
 #addBtn {
     display: none;
+}
+
+.heightNumber {
+    height: 30px;
+    width: 55px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.widthNumber {
+    height: 30px;
+    width: 55px;
+    position: relative;
+    top: 10px;
+    left: 10px;
 }
