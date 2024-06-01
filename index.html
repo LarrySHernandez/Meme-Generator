@@ -17,27 +17,22 @@
         <div class="inputBox">
             <div class="imageBox">
                 <div class="imageBoxTop">
-
+                    <div class="imageSizingAndBorder">
+                        <label class="heightNumber" for="heightNumber">Height</label>
+                        <input type="number" max="635" class="heightNumber numbers" id="heightNumber">
+                        <label class="widthNumber" for="widthNumber">Width</label>
+                        <input type="number" max="860" class="widthNumber numbers" id="widthNumber">
+                    </div>
 
                 </div>
                 <div class="image">
                     <div id="memeImageBorder">
                     </div>
                     <div class="imageChooserBox">
-                        <input class="fileImageInput" type="file">
-                        <div class="imageInput">or</div>
                         <form>
                             <input id="urlInput" class="imageInput urlTextInput" type="text" placeholder="URL">
                             <button id="imageSubmitBtn" class="imageInput">Submit</button>
                         </form>
-                    </div>
-                </div>
-                <div class="imageFooter">
-                    <div class="imageSizingAndBorder">
-                        <label class="heightNumber" for="heightNumber">Height</label>
-                        <input type="number" max="635" class="heightNumber numbers" id="heightNumber">
-                        <label class="widthNumber" for="widthNumber">Width</label>
-                        <input type="number" max="860" class="widthNumber numbers" id="widthNumber">
                     </div>
                 </div>
             </div>
@@ -48,16 +43,19 @@
                 </div>
                 <div class="memeTextBorder">
                     <form action="">
-                        <label class="memeText" for="memeText">Meme Text</label>
-                        <input class="memeText" id="memeText" type="text">
+                        <label class="memeText" for="memeTopText">Meme Top Text</label>
+                        <input class="memeText" id="memeTopText" type="text">
                         <br>
-                        <label for="addBtn" class="addBtn">Add Text</label>
-                        <button id="addBtn" type="button"></button>
+                        <label class="memeText" for="memeBottomText">Meme Bottom Text</label>
+                        <input class="memeText" id="memeBottomText" type="text">
 
                     </form>
                 </div>
             </div>
-
+            <div class="imageFooter">
+                <label for="addBtn" class="addBtn">Add Text</label>
+                <button id="addBtn" type="button"></button>
+            </div>
 
         </div>
     </div>
