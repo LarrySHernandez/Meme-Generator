@@ -44,20 +44,24 @@
                 <div class="memeTextBorder">
                     <form action="">
                         <label class="memeText" for="memeTopText">Meme Top Text</label>
-                        <input class="memeText" id="memeTopText" type="text">
+                        <input class="memeText" id="memeTopText" type="text" max="40">
+                        <p id="textMaxTop" class="textMaxMessage hidden">Text has to be less than 40 characters</p>
                         <br>
                         <label class="memeText" for="memeBottomText">Meme Bottom Text</label>
-                        <input class="memeText" id="memeBottomText" type="text">
-
+                        <input class="memeText" id="memeBottomText" type="text" max="40">
+                        <p id="textMaxBottom" class="textMaxMessage hidden">Text has to be less than 40 characters</p>
                     </form>
                 </div>
             </div>
             <div class="imageFooter">
-                <label for="addBtn" class="addBtn">Add Text</label>
+                <label for="addBtn" class="addBtn">Generate Meme</label>
                 <button id="addBtn" type="button"></button>
             </div>
 
         </div>
+    </div>
+    <div id="memes" class="hidden">
+        <h1>Memes</h1>
     </div>
     <footer>
 

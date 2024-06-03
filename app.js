@@ -7,6 +7,11 @@ let widthInput = document.getElementById("widthNumber");
 let sizingInputs = document.getElementById("numbers");
 let addBtn = document.getElementById('addBtn');
 let memeText = document.getElementById('memeText');
+let memes = document.getElementById('memes');
+let memeTopText = document.getElementById('memeTopText');
+let memeBottomText = document.getElementById('memeBottomText');
+let textMaxTop = document.getElementById('textMaxTop');
+let textMaxBottom = document.getElementById('textMaxBottom');
 
 
 //Default Settings
@@ -14,24 +19,50 @@ heightInput.value = '300';
 widthInput.value = '300';
 
 
-function createText() {
-    let text = memeText.value;
-    let textBox = document.createElement('p');
-    textBox.innerText = text;
-    textBox.style.height = '25px';
-    textBox.style.width = '70px';
-    textBox.style.position = 'absolute';
-    console.dir(textBox);
-    memeImageBorder.appendChild(textBox);
+function createMeme() {
+    let meme = memeImageBorder.cloneNode(true);
+    let memeTextTop = document.createElement('div');
+    memeTextTop.innerText = memeTopText.value;
+    memeTextTop.style.display = 'block';
+    memeTextTop.style.textAlign = 'center';
+    memeTextTop.style.margin = '13px';
+    memeTextTop.style.fontSize = '22px';
+    let memeTextBottom = document.createElement('div');
+    memeTextBottom.innerText = memeBottomText.value;
+    memeTextBottom.style.display = 'block';
+    memeTextBottom.style.textAlign = 'center';
+    memeTextBottom.style.marginTop = '210px';
+    memeTextBottom.style.fontSize = '22px';
 
+    meme.append(memeTextTop);
+    meme.append(memeTextBottom);
+    meme.style.display = 'inline';
+    memes.classList.remove('hidden');
+    memes.append(meme);
 }
 
 
 
-addBtn.addEventListener('click', function () {
-    if (memeImageBorder.style.zIndex.length > 1) {
-        createText();
-
+addBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (memeTopText.value.length > 40) {
+        textMaxTop.classList.remove('hidden');
+    } else {
+        textMaxTop.classList.add('hidden');
+    }
+    if (memeBottomText.value.length > 40) {
+        textMaxBottom.classList.remove('hidden');
+    } else {
+        textMaxBottom.classList.add('hidden');
+    }
+    if (memeImageBorder.style.zIndex > 1 && memeTopText.value.length > 40 && memeBottomText.value.length > 40) {
+        createMeme();
+        let url = urlInput.value;
+        memeImageBorder.style.zIndex = '0';
+        memeImageBorder.style.backgroundImage = 'url("")';
+        urlInput.value = '';
+        memeTopText.value = '';
+        memeBottomText.value = '';
     }
 });
 
@@ -60,7 +91,7 @@ widthInput.addEventListener('input', function (event) {
 
 imageSubmitBtn.addEventListener('click', function (e) {
     e.preventDefault();
-    let url = urlInput.value
+    let url = urlInput.value;
     memeImageBorder.style.zIndex = '2';
     memeImageBorder.style.backgroundImage = `url("${url}")`
 });
