@@ -115,11 +115,12 @@ h1 {
     overflow: hidden;
     background-color: rgb(44, 44, 44);
     z-index: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     margin: 10px;
     border-radius: 10px;
+
 }
 
 
@@ -167,6 +168,10 @@ h1 {
     background-color: transparent;
     color: white;
 
+}
+
+#memeBottomText {
+    margin-bottom: 30px;
 }
 
 .addBtn {
@@ -236,4 +241,48 @@ h1 {
     top: 110px;
     text-align: center;
     color: red;
+}
+
+.textDecoration {
+    display: block;
+    text-align: center;
+    font-weight: bolder;
+    color: black;
+    outline-color: white;
+}
+
+#fontSizeBorder {
+    position: relative;
+    top: 17px;
+    left: 40%;
+}
+
+
+#fontSize {
+    width: 40px;
+    margin-left: 10px;
+    height: 30px;
+    width: 55px;
+}
+
+#topTextDemo {
+    /* border: white solid 1px; */
+    height: 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+}
+
+#bottomTextDemo {
+    /* border: white solid 1px; */
+    height: 10px;
+    width: 100%;
+    display: block;
+    position: relative;
+    top: 80%;
+    text-align: center;
+    -webkit-text-stroke-width: .2px;
+    -webkit-text-stroke-color: white;
 }
